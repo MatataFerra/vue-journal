@@ -6,7 +6,7 @@
       or create a new one!
     </h2>
   </div>
-  <Fab />
+  <Fab @on:click="goToCreateEntry" />
 </template>
 
 <script>
@@ -14,6 +14,12 @@ import Fab from '@/modules/daybook/components/Fab.vue';
 export default {
   components: {
     Fab,
+  },
+
+  methods: {
+    goToCreateEntry() {
+      this.$router.push({ name: 'entry', params: { id: 'new' } });
+    },
   },
 };
 </script>

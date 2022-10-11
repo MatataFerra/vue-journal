@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <button class="btn btn-primary rounded-circle">
+  <button class="btn btn-primary rounded-circle" @:click="$emit('on:click')">
     <i class="fa fa-2x" :class="icon"></i>
   </button>
 </template>
